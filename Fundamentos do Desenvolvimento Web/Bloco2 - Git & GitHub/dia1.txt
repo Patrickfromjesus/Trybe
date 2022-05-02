@@ -1,0 +1,38 @@
+O QUE APRENDI NESTE DIA 🤔️ :
+
+O que é o Git ?
+
+R. É uma ferramenta de versionamento de código que visa a organização e coloboração dos códigos e programadores.
+
+Qual a principal diferença para os outros VCS's ?
+
+R. Git é um versionamento distribuído, que visa a agilidade de sincronização dos processos.
+
+Como configurar o Git na sua máquina?
+
+R. No terminal, com git init, git add, git commit -m, git push.
+
+Como iniciar um repositório local?
+
+R. git init.
+
+O que é o GitHub ?
+
+R. É uma rede de organização de versionamento de códigos e troca de informações públicas relacionadas à programação.
+
+Como subir seu repositório local para o GitHub ?
+
+R. git push.
+
+O que é Branch , Merge , Commit ?
+
+R. Branch: "Ramos" criados de um mesmo arquivo para fazer modificações desejadas sem alterar o arquivo original.
+Merge: Junção dos commits feitos para um arquivo principal e final.
+Commit: Alterações feitas no arquivo de um branch.
+
+
+O que sou capaz de fazer :
+1. Instalar e configurar o Git no seu computador;
+2. Salvar seus projetos no repositório Git local;
+3. Controlar as alterações e versões dos seus arquivos;
+4. Enviar seus projetos para o repositório remoto do GitHub .

@@ -1,0 +1,7 @@
+1 - Coca-cola;
+2 - Suco de uva;
+3 - Suco de limão;
+4 - Suco de maracujá;
+5 - Suco de Cupuaçu;
+6 - Guaraná;
+7 - Sprite;

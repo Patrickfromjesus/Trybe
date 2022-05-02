@@ -1,0 +1,4 @@
+papel
+caneta
+lápis
+etc

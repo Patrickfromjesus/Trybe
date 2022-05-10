@@ -1,0 +1,48 @@
+div:hover {
+    border: 2px solid #000;
+}
+
+.first {
+    color: red;
+}
+
+.second {
+    color: green;
+}
+
+.complementary {
+    color: aqua;
+    height: 200px;
+}
+
+.dark {
+    color: darkblue;
+}
+
+.light {
+    color: lightcoral;
+}
+
+.first h3 {
+    font-weight: bold;
+}
+
+.second h3 {
+    font-style: oblique;
+}
+
+.complementary h3 {
+    text-decoration: line-through;
+}
+
+.dark h3 {
+    text-decoration: underline;
+}
+
+.light h3 {
+    text-decoration: overline;
+}
+
+.first, .complementary, .light {
+    font-style: italic;
+}

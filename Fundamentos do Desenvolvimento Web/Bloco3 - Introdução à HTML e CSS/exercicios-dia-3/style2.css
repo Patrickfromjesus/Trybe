@@ -1,0 +1,32 @@
+* {
+block-size: border-content;
+}
+
+.super-mario {
+width: 500px;
+display: block;
+}
+
+ .goomba {
+width: 500px;
+display: block;
+}
+
+  div {
+width: 300px;
+height: 190px;
+background-image: url(https://bit.ly/3tmxgED);
+background-position: cover;
+text-align: center;
+}
+  
+  .speach {
+width: 200px;
+padding-top: 68px;
+padding-left: 45px;
+}
+
+  .bowser {
+width: 500px;
+padding-left: 200px;
+}

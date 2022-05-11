@@ -1,0 +1,47 @@
+h1 {
+  text-align: center;
+}
+.first {
+  background-color: rgb(235, 200, 84);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto
+}
+.second {
+  background-color: rgb(219, 219, 219);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  float: left;
+  margin-right: 3px;
+}
+.third {
+  background-color: rgb(170, 142, 106);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  float: left;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.reward {
+    clear: both;
+    text-align: center;
+}
+
+.reward li {
+    display: inline;
+}
+
+.podium-down {
+    width: 603px;
+    overflow: hidden;
+    margin: 0 auto;
+}

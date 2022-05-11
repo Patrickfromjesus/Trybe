@@ -1,0 +1,58 @@
+body {
+    
+}
+
+nav, article, header, table {
+    font-size: 18px;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+}
+nav p {
+    display: inline;
+}
+
+.nav {
+    border: 1px solid #000;
+    margin-left: 10px;
+    padding: 2px;
+}
+
+nav {
+   margin-bottom: 3px;
+}
+
+.tabela {
+    margin: 0 auto;
+}
+
+img{
+    width: 400px;
+}
+
+.legenda {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+article {
+    float: left;
+    border: 1px solid #000;
+}
+
+.yt {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+aside {
+    width: 196px;
+    border: 1px solid #000;
+    overflow: hidden;
+    float: left;
+}
+
+footer {
+    clear: both;
+}

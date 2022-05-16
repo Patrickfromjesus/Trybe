@@ -1,4 +1,4 @@
-const salary = 3000.00;
+const salary = 5000.00;
 let total = 0;
 
 //para INSS

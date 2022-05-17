@@ -1,4 +1,4 @@
-let width = 9;
+let width = 7;
 let iterator = 0;
 let count = 0;
 let copy = width;
@@ -33,10 +33,6 @@ for(let  i = 0; i < count; i++) {
             else {
                 chunk += "*";
             }    
-        }
-
-        for(let q = 1; q < width / 2 - i; q++) {
-            chunk += " ";    
         }
     console.log(chunk);
 }

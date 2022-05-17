@@ -1,20 +1,31 @@
-const height = 5;
-let t = 0;
+let width = 9;
+let iterator = 0;
+let count = 0;
+let copy = width;
 
-for(let p = height; p > 0 ; p--) {
-    var chunk = "";
-    t += 2;
-    
-    for(let i = 1; i < p; i++) {
-        chunk += " ";
+//descobrir qual será a altura da pirâmide.
+for(let i = 0; i < width; i++) {
+    if(copy >= 0) {
+        count++;
+        copy -= 2;
     }
-    
-    for(let r = 1; r < t; r++) {
-        chunk += "*";
-    }
+}
 
-    for(let i = 1; i < p; i++) {
-        chunk += " ";
-    }
+//iterar tantas vezes quanto sua altura, descoberta anteriormente.
+for(let  i = 0; i < count; i++) {
+    let chunk = ""
+    iterator += 2;
+
+        for(let q = 1; q < width / 2 - i; q++) {
+            chunk += " ";    
+        }
+
+        for(let q = 1; q < iterator ; q++) {
+            chunk += "*";    
+        }
+
+        for(let q = 1; q < width / 2 - i; q++) {
+            chunk += " ";    
+        }
     console.log(chunk);
 }

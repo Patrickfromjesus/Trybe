@@ -81,6 +81,16 @@
         father.appendChild(son);
     }
 
+    function doList(dadClass, contents) {
+        let dad = document.querySelector(dadClass);
+
+        for(let i = 0; i < contents.length; i++) {
+            let kid = document.createElement('li');
+            kid.innerHTML = contents[i];
+            dad.appendChild(kid);
+        }
+    }
+
     //1
     createTags('body', 'h1', 'Exercício 5.2 - JavaScript DOM', 'main-title');
     //2
@@ -93,9 +103,13 @@
     //5
     createTags('main', 'section', '', 'left-content');
     //6
-    createTags('main', 'section', '', 'rigth-content');
+    createTags('main', 'section', '', 'right-content');
     //7
     createElements('.left-content', 'img', '', 'src', 'https://picsum.photos/200', 'first-imgsrc');
+    //8
+    createElements('.right-content', 'ul', '', '', '', 'list-right');
+    let listItens = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    doList('.right-content .list-right', listItens);
     
 
 

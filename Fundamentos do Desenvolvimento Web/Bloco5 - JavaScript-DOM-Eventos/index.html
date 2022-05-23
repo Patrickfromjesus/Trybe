@@ -64,6 +64,23 @@
         let auxFather = document.getElementsByTagName(tag)[0]; 
         auxFather.appendChild(auxTag);
     }
+
+    function createElements(fatherClass, newElement, anyText, name, value, whatClass) {
+        let father = document.querySelector(fatherClass);
+        let son = document.createElement(newElement);
+        
+        if(anyText !== "") {
+            son.innerHTML = anyText;
+        }
+        
+        if(name !== '') {
+            son.setAttribute(name, value);
+        
+        }
+        son.className = whatClass;
+        father.appendChild(son);
+    }
+
     //1
     createTags('body', 'h1', 'Exercício 5.2 - JavaScript DOM', 'main-title');
     //2
@@ -77,6 +94,9 @@
     createTags('main', 'section', '', 'left-content');
     //6
     createTags('main', 'section', '', 'rigth-content');
+    //7
+    createElements('.left-content', 'img', '', 'src', 'https://picsum.photos/200', 'first-imgsrc');
+    
 
 
 

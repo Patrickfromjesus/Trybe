@@ -130,8 +130,12 @@
     //5.2
     let backModify = document.querySelector('.center-content');
     backModify.style.cssText = 'background-color: #0f0;';
-
-
+    //6.2
+    for(let i = 0; i < 2; i++) {
+    let liFirst = document.querySelector('ul').lastChild;
+    let ulRemove = document.querySelector('ul');
+    ulRemove.removeChild(liFirst);
+    }
 
     </script>
   </body>

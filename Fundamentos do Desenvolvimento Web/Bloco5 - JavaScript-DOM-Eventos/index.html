@@ -57,12 +57,16 @@
   </head>
   <body>
     <script>
-        function createTags(tag, createTag, text, classNamed) {
-        let auxTag = document.createElement(createTag);
-        auxTag.innerText = text;
-        auxTag.className = classNamed;
-        let auxFather = document.getElementsByTagName(tag)[0]; 
-        auxFather.appendChild(auxTag);
+        function createTags(tag, createTag, text, classNamed, repeatTimes) {
+        for(let i = 0; i < repeatTimes; i++) {
+        
+            let auxTag = document.createElement(createTag);
+            auxTag.innerText = text;
+            auxTag.className = classNamed;
+            let auxFather = document.getElementsByTagName(tag)[0]; 
+            auxFather.appendChild(auxTag);
+
+        }
     }
 
     function createElements(fatherClass, newElement, anyText, name, value, whatClass) {
@@ -92,24 +96,26 @@
     }
 
     //1
-    createTags('body', 'h1', 'Exercício 5.2 - JavaScript DOM', 'main-title');
+    createTags('body', 'h1', 'Exercício 5.2 - JavaScript DOM', 'main-title', 1);
     //2
-    createTags('body', 'main', '', 'main-content');
+    createTags('body', 'main', '', 'main-content', 1);
     //3
-    createTags('main', 'section', '', 'center-content');
+    createTags('main', 'section', '', 'center-content', 1);
     //4
     let someText = 'Lorem ipsum dolor sit amet. Nam voluptatem asperiores quo tempore dicta vel voluptates possimus? Et atque cupiditate rem iste nobis aut dignissimos temporibus nam impedit ipsum. Sit pariatur veniam eum repellat rerum sed soluta minus 33 esse quos. Ut repudiandae rerum eos temporibus facilis id natus similique quo inventore expedita. Aut eveniet nesciunt id optio galisum ut internos similique et iusto rerum et ratione possimus!';
-    createTags('section', 'p', someText, '');
+    createTags('section', 'p', someText, '', 1);
     //5
-    createTags('main', 'section', '', 'left-content');
+    createTags('main', 'section', '', 'left-content', 1);
     //6
-    createTags('main', 'section', '', 'right-content');
+    createTags('main', 'section', '', 'right-content', 1);
     //7
     createElements('.left-content', 'img', '', 'src', 'https://picsum.photos/200', 'first-imgsrc');
     //8
     createElements('.right-content', 'ul', '', '', '', 'list-right');
     let listItens = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
     doList('.right-content .list-right', listItens);
+    //9
+    createTags('main', 'h3', 'alow!', 'three-h-three', 3);
     
 
 

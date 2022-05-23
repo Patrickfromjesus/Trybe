@@ -95,8 +95,14 @@
         }
     }
 
+    function removeTags(parentClass, yourClass) {
+        let removeLeft = document.querySelector(yourClass);
+        document.querySelector(parentClass).removeChild(removeLeft);
+    }
+
+
     //1
-    createTags('body', 'h1', 'Exercício 5.2 - JavaScript DOM', 'main-title', 1);
+    createTags('body', 'h1', 'Exercício 5.2 - JavaScript DOM', 'title', 1);
     //2
     createTags('body', 'main', '', 'main-content', 1);
     //3
@@ -115,10 +121,12 @@
     let listItens = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
     doList('.right-content .list-right', listItens);
     //9
-    createTags('main', 'h3', 'alow!', 'three-h-three', 3);
-    
-
-
+    createTags('main', 'h3', 'alow!', 'description', 3);
+    //3.2
+    removeTags('.main-content', '.left-content');
+    //4.2
+    let modify = document.querySelector('.right-content');
+    modify.style.cssText = 'margin-right: auto;'; 
 
 
 

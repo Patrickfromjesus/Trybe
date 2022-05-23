@@ -57,11 +57,19 @@
   </head>
   <body>
     <script>
-        let takeBody = document.getElementsByTagName('body')[0];
-        let pushBody = document.createElement('h1');
-        pushBody.innerText = 'Exercício 5.2 - JavaScript DOM';
-        takeBody.appendChild(pushBody);
-        
+        function createTags(tag, createTag, text, classNamed) {
+        let auxTag = document.createElement(createTag);
+        auxTag.innerText = text;
+        auxTag.className = classNamed;
+        let auxFather = document.getElementsByTagName(tag)[0]; 
+        auxFather.appendChild(auxTag);
+    }
+    //1
+    createTags('body', 'h1', 'Exercício 5.2 - JavaScript DOM', 'main-title');
+    //2
+    createTags('body', 'main', '', 'main-content');
+    //3
+    createTags('main', 'section', '', 'center-content');
 
 
 

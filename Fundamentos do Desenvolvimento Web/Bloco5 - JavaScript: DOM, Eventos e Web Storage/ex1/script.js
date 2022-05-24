@@ -40,15 +40,15 @@ function createDaysOfTheWeek() {
   }
 
   //2
-  function createAButton(feriado) {
+  function createAButton(feriado, whatId) {
     let buttonBorn = document.createElement('button');
-    buttonBorn.id = 'btn-holiday';
+    buttonBorn.id = whatId;
     buttonBorn.innerHTML = feriado;
 
     let fatherDiv = document.querySelector('.buttons-container');
     fatherDiv.appendChild(buttonBorn);
   }
-  createAButton('Feriados');
+  createAButton('Feriados', 'btn-holiday');
 
   //3
   let buttonVar = document.querySelector('#btn-holiday');
@@ -66,4 +66,8 @@ function createDaysOfTheWeek() {
                 daysHoliday[i].style.cssText = 'background-color: rgb(238, 238, 238)';
             }
         }
-    }
+  }
+
+  //4
+  createAButton('Sexta-Feira', 'btn-friday');
+

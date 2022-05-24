@@ -25,7 +25,7 @@ function createDaysOfTheWeek() {
       let ulList = document.getElementById('days');
 
       if(day === 24 || day === 25 || day === 31) {
-          createADay.className += ' holyday';
+          createADay.className += ' holiday';
       }
 
       if(day === 4 || day === 11 || day === 18 || day === 25) {
@@ -50,3 +50,20 @@ function createDaysOfTheWeek() {
   }
   createAButton('Feriados');
 
+  //3
+  let buttonVar = document.querySelector('#btn-holiday');
+  let daysHoliday = document.querySelectorAll('.holiday');
+  buttonVar.addEventListener('click', changeBackColor);
+  let backOld = 'rgb(238, 238, 238)';
+  let backNew = '#888';
+  
+  function changeBackColor(event) {
+      for(let i in daysHoliday) {
+            if(daysHoliday[i].style.backgroundColor === backOld) {
+                daysHoliday[i].style.cssText = 'background-color: #888';
+            }
+            else {
+                daysHoliday[i].style.cssText = 'background-color: rgb(238, 238, 238)';
+            }
+        }
+    }

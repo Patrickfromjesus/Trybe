@@ -74,15 +74,19 @@ function createDaysOfTheWeek() {
   //5
   let buttonFriday = document.getElementById('btn-friday');
   buttonFriday.addEventListener('click', frided);
+  let storage = [];
+  let fridayContainer = document.querySelectorAll('.friday');
+  for(let i of fridayContainer) {
+    storage.push(i.innerText);
+  }
   
   function frided() {
-    let fridayContainer = document.querySelectorAll('.friday');
     for(let p in fridayContainer) {
-        if(fridayContainer[p].innerText !== 'SEXTOU!') { 
+        if(fridayContainer[p].innerText !== 'SEXTOU!') {
             fridayContainer[p].innerText = 'SEXTOU!';
         }
         else {
-            
+            fridayContainer[p].innerText = storage[p];
         }
     }
   }

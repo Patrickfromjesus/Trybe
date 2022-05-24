@@ -149,13 +149,19 @@ function createDaysOfTheWeek() {
   }
 
   function changeColor(eventToChange) {
-      if(eventToChange.target.style.color !== document.querySelector('.selected').style.backgroundColor) {
-        let appear = document.querySelector('.selected').style.backgroundColor;
-        eventToChange.target.style.cssText += 'color: ' + appear;
+      if(document.querySelector('.selected')){
+        if(eventToChange.target.style.color !== document.querySelector('.selected').style.backgroundColor) {
+          let appear = document.querySelector('.selected').style.backgroundColor;
+          eventToChange.target.style.cssText += 'color: ' + appear;
+        }
+        else if(eventToChange.target.style.color === document.querySelector('.selected').style.backgroundColor || eventToChange.target.style.color === document.querySelector('.task').style.backgroundColor) {
+          let appear = 'rgb(119,119,119)';
+          eventToChange.target.style.cssText += 'color: ' + appear;
       }
-      else {
+    }
+    else {
         let appear = 'rgb(119,119,119)';
         eventToChange.target.style.cssText += 'color: ' + appear;
-      }
+    }
   }
 

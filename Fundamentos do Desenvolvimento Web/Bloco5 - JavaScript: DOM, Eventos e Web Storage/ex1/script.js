@@ -98,15 +98,15 @@ function createDaysOfTheWeek() {
 
   function leaveZoomDay(event) {
       let helper = event.target;
-      if(helper.style.fontSize === '40px') {
-        helper.style.cssText = 'font-size: 20px';
+      if(helper.style.fontSize === '30px') {
+        helper.style.cssText += 'font-size: 20px';
       }
   }
 
   function zoomDay(events) {
       let helper = events.target;
-      if(helper.style.fontSize !== '40px') {
-        helper.style.cssText = 'font-size: 40px';
+      if(helper.style.fontSize !== '30px') {
+        helper.style.cssText += 'font-size: 30px';
       }
   }
 
@@ -126,7 +126,7 @@ function createDaysOfTheWeek() {
   addTask('cozinhar', 'span', 'cock', '');
 
   //8
-  addTask('', 'div', 'task', '#ddd')
+  addTask('', 'div', 'task', '#f00');
 
   //9
   let divTask = document.querySelector('.task');
@@ -140,5 +140,22 @@ function createDaysOfTheWeek() {
     else if(classCheck.className === 'task selected') {
         classCheck.className = 'task';
     }
+  }
+
+  //10
+  let daySelect = document.querySelectorAll('.day');
+  for(let i = 0; i < daySelect.length; i++) {
+    daySelect[i].addEventListener('click', changeColor);
+  }
+
+  function changeColor(eventToChange) {
+      if(eventToChange.target.style.color !== document.querySelector('.selected').style.backgroundColor) {
+        let appear = document.querySelector('.selected').style.backgroundColor;
+        eventToChange.target.style.cssText += 'color: ' + appear;
+      }
+      else {
+        let appear = 'rgb(119,119,119)';
+        eventToChange.target.style.cssText += 'color: ' + appear;
+      }
   }
 

@@ -110,3 +110,12 @@ function createDaysOfTheWeek() {
       }
   }
 
+  //7
+  function addTask(task) {
+      let elementTaked = document.querySelector('.my-tasks');
+      let createAString = document.createElement('span');
+      createAString.innerText = task;
+      elementTaked.appendChild(createAString); 
+  }
+  addTask('cozinhar');
+

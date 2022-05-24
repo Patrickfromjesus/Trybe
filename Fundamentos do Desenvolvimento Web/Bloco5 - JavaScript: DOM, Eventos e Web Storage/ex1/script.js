@@ -128,3 +128,17 @@ function createDaysOfTheWeek() {
   //8
   addTask('', 'div', 'task', '#ddd')
 
+  //9
+  let divTask = document.querySelector('.task');
+  divTask.addEventListener('click', selectTask);
+
+  function selectTask(eventTask) {
+    let classCheck = eventTask.target
+    if(classCheck.className === 'task') {
+      classCheck.className = 'task selected';
+    }
+    else if(classCheck.className === 'task selected') {
+        classCheck.className = 'task';
+    }
+  }
+

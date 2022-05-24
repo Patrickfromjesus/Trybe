@@ -111,11 +111,20 @@ function createDaysOfTheWeek() {
   }
 
   //7
-  function addTask(task) {
+  function addTask(task, newElements, whatClass, color) {
       let elementTaked = document.querySelector('.my-tasks');
-      let createAString = document.createElement('span');
+      let createAString = document.createElement(newElements);
       createAString.innerText = task;
+      createAString.className = whatClass;
+      
+      if(color !== '') {
+        createAString.style.cssText = 'background-color: ' + color;
+      }
+
       elementTaked.appendChild(createAString); 
   }
-  addTask('cozinhar');
+  addTask('cozinhar', 'span', 'cock', '');
+
+  //8
+  addTask('', 'div', 'task', '#ddd')
 

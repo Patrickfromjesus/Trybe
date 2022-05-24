@@ -71,3 +71,42 @@ function createDaysOfTheWeek() {
   //4
   createAButton('Sexta-Feira', 'btn-friday');
 
+  //5
+  let buttonFriday = document.getElementById('btn-friday');
+  buttonFriday.addEventListener('click', frided);
+  
+  function frided() {
+    let fridayContainer = document.querySelectorAll('.friday');
+    for(let p in fridayContainer) {
+        if(fridayContainer[p].innerText !== 'SEXTOU!') { 
+            fridayContainer[p].innerText = 'SEXTOU!';
+        }
+        else {
+            
+        }
+    }
+  }
+
+  //6
+  let daysStorage = document.querySelectorAll('.day');
+  for(let i = 0; i < daysStorage.length; i++) {
+    daysStorage[i].addEventListener('mouseenter', zoomDay);
+  }
+  for(let i = 0; i < daysStorage.length; i++) {
+    daysStorage[i].addEventListener('mouseleave', leaveZoomDay);
+  }
+
+  function leaveZoomDay(event) {
+      let helper = event.target;
+      if(helper.style.fontSize === '40px') {
+        helper.style.cssText = 'font-size: 20px';
+      }
+  }
+
+  function zoomDay(events) {
+      let helper = events.target;
+      if(helper.style.fontSize !== '40px') {
+        helper.style.cssText = 'font-size: 40px';
+      }
+  }
+

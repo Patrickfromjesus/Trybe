@@ -1,0 +1,45 @@
+body {
+    margin: 0 100px;
+    text-align: justify;
+    font-size: 22px;
+    background-color: cadetblue;
+}
+
+body h1 {
+    text-align: center;
+}
+
+button {
+    background-color: rgb(186, 201, 212);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.button-input {
+    float: left;
+    margin-right: 10px;
+}
+
+.button-div {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    border-top: 1px solid #000;
+    margin-bottom: 12px;
+}
+
+.button-div h3 {
+    text-align: center;
+}
+
+button:hover {
+    font-size: 14px;
+    font-style: italic;
+}
+
+input {
+    width: 80px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}

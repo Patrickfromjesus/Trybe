@@ -55,12 +55,12 @@ function createDaysOfTheWeek() {
   let daysHoliday = document.querySelectorAll('.holiday');
   buttonVar.addEventListener('click', changeBackColor);
   let backOld = 'rgb(238, 238, 238)';
-  let backNew = '#888';
+  let backNew = '#fff';
   
   function changeBackColor(event) {
       for(let i in daysHoliday) {
             if(daysHoliday[i].style.backgroundColor === backOld) {
-                daysHoliday[i].style.cssText = 'background-color: #888';
+                daysHoliday[i].style.cssText = 'background-color: #fff';
             }
             else {
                 daysHoliday[i].style.cssText = 'background-color: rgb(238, 238, 238)';

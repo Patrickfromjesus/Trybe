@@ -2,12 +2,14 @@ fieldset {
     background-color: #444;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
-    border: 3px solid #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 4px 3px 3px #000;
 }
 body {
     background-color: #aaa;
     margin: 10px 50px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 button {
@@ -18,15 +20,25 @@ button {
     margin-right: 50px;
     border: 1px solid #fff;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 1px #fff;
+    text-shadow: 1px 3px 5px #fff;
     font-weight: bold;
+    box-shadow: 2px 2px 2px #000;
 }
 button:hover {
     border: 2px solid #000;
 }
 input {
     height: 20px;
+    border-radius: 5px;
 }
 .radio {
     margin-left: 15px;
+}
+legend h2 {
+    text-shadow: 1px 10px 6px #000;
+}
+
+textarea {
+    background-color: #ccc;
+    border-radius: 8px;
 }

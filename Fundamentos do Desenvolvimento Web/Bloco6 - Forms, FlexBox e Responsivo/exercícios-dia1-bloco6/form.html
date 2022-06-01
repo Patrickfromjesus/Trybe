@@ -5,56 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
 </head>
+
 <body>
+
 <form action="" method="get">
     <fieldset>
+               
         <legend><h2>Formulário de cadastro</h2></legend>
     
-    <label for="name">Nome Completo:<br/>
-        <input type="text" name="name-person" id="name" maxlength="40" minlength="10" placeholder="Nome" required>
-    </label>
-<br/><br/>
-    <label for="email">Email:<br/>
-        <input type="email" name="email-person" id="email" maxlength="50" minlength="10" placeholder="Email" required>
-    </label>
-    
-    <label for=""><h4>Onde você nasceu?</h4>
-        <select name='state-from' id="state">
+        <div class="form-group">
+        <label class="form-label" for="name">Nome Completo:</label>
+        <input type="text" class="form-control" name="name-person" id="name" maxlength="40" minlength="10" placeholder="Nome" required>
+        <small id="passwordHelpBlock" class="form-text text-muted"><em>*Deve ter entre 10 e 40 caracteres.</em></small>
+        </div>
+
+<br/>
+
+        <div class="form-group">
+        <label class="form-label" for="email">Email:</label>
+        <input type="email" class="form-control" name="email-person" id="email" maxlength="50" minlength="10" placeholder="Email" required>
+        <small id="passwordHelpBlock" class="form-text text-muted"><em>*Deve ter entre 10 e 50 caracteres.</em></small>
+        </div>
+
+<br/>
+
+        <div class="form-group">
+        <label class="form-label" for="">Onde você nasceu?</label>
+        <select name='state-from' class="form-control form-select" id="state">
             <option value="rj">Rio de Janeiro</option>
             <option value="sp">São Paulo</option>
             <option value="mg">Minas Gerais</option>
             <option selected value="ba">Salvador</option>
-        </select> </label>
+        </select>
+        </div>
 
-    <h4>Selecione um destino desejado</h4>
+<br/>
 
-    <label for="favorite-location1">
-        <input type="radio" name="destiny" id="favorite-location1" class="radio" required>Cidade</label>
-    <label for="favorite-location2">    
-        <input type="radio" name="destiny" id="favorite-location2" class="radio" required>Campo</label>
-    <label for="favorite-location3">
-        <input type="radio" name="destiny" id="favorite-location3" class="radio" required>Praia</label>
-    <label for="favorite-location4">
-        <input type="radio" name="destiny" id="favorite-location4" class="radio" required>Montanhas</label>
+        <p>Selecione um destino desejado</p>
+
+        <div class="form-group form-check form-check-inline">
+        <label class="form-check-label" for="favorite-location1">
+        <input type="radio" name="destiny" id="favorite-location1" class="form-check-input" required>Cidade</label>
+        </div>
+
+        <div class="form-group form-check form-check-inline">
+        <label class="form-check-label" for="favorite-location2">    
+        <input type="radio" name="destiny" id="favorite-location2" class="form-check-input" required>Campo</label>
+        </div>
+
+        <div class="form-group form-check form-check-inline">
+        <label class="form-check-label" for="favorite-location3">
+        <input type="radio" name="destiny" id="favorite-location3" class="form-check-input" required>Praia</label>
+        </div>
+        
+        <div class="form-group form-check form-check-inline">
+        <label class="form-check-label" for="favorite-location4">
+        <input type="radio" name="destiny" id="favorite-location4" class="form-check-input" required>Montanhas</label>
+        </div>
+
+<br/><br/>
+
+        <div class="form-group">
+        <label class="form-label" for="why-me">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+        <textarea class="form-control" nome="why-me" id="why-me" cols="90" rows="4" maxlength="500" placeholder="Máximo de 500 caracteres." required></textarea>
+        </div>
+
+<br/>
+
+        <div class="form-group">
+        <label class="form-label" for="travel-date"><p>Em que data gostaria de fazer a viagem, caso ganhasse?</p>
+        <input class="form-control" type="date" name="travel-date" id="travel-date" placeholder="dd/mm/aa" required></label>
+        </div>
+
+<br/>
+
+        <div class="form-group">
+        <label class="form-label form-check-label" for="would-like1">
+        <input class="form-check-input" type="checkbox" name="would-like1" id="would-like1">
+        <strong>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? </strong></label>
+        </div>
+
+        <div class="form-group">
+        <label class="form-label form-check-label" for="would-like2">
+        <input class="form-check-input" type="checkbox" name="would-like2" id="would-like2" required>
+        <strong>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.*</strong></label>
+        </div>
     
-    <label for="why-me"><h4>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h4>
-        <textarea nome="why-me" id="why-me" cols="90" rows="4" maxlength="500" placeholder="Máximo de 500 caracteres." required></textarea></label>
-<br/>
-    <label for=""><h4>Em que data gostaria de fazer a viagem, caso ganhasse?</h4>
-        Data: <input type="date" name="travel-date" id="travel-date" placeholder="dd/mm/aa" required></label>
-    <br/><br/>
-
-    <label for="would-like1">
-        <strong>Gostaria de receberoutras incríveis oportunidades oferecidas pela Trybe? </strong><input type="checkbox" name="would-like1" id="would-like1"></label>
-<br/>
-    <label for="would-like2">
-        <strong>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. </strong><input type="checkbox" name="would-like2" id="would-like2" required></label>
     </fieldset>
-    <br/>
-    <button id="submit-button" type="submit">Fazer cadastro</button>
-    <button id="erase-button" type="reset">Apagar informações</button>
+
+<br/>
+
+    <button class="btn btn-success" id="submit-button" type="submit">Fazer cadastro</button>
+    <button class="btn btn-danger" id="erase-button" type="reset">Apagar informações</button>
+
 </form>
 
 <script src="script.js"></script>

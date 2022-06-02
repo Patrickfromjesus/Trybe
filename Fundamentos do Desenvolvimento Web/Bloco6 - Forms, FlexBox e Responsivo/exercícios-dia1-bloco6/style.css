@@ -1,7 +1,26 @@
 body {
     margin: 2% 10%;
+    color: #fff;
     background-color: rgb(123, 131, 138);
+    text-shadow: 1px 1px 1px #000;
 }
 #submit-button {
     margin-right: 10px;
+    margin-bottom: 10px;
+}
+#erase-button {
+    margin-bottom: 10px;
+}
+
+#title-page #green-trybe {
+    color: rgb(45, 201, 45);
+    text-shadow: 1px 5px 4px #000;
+}
+#email-help {
+    color: #fff;
+}
+#img-trybe {
+    width: 30px;
+    border-radius: 15px;
+    margin-left: 0.5%;
 }

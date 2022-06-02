@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
     <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.6.0.min.js"></script>
@@ -13,10 +13,10 @@
 
 <body>
 
-<form action="" method="get">
+<form action="" method="get" class="container">
     <fieldset>
                
-        <legend><h2>Formulário de cadastro</h2></legend>
+        <legend><h2 id="title-page">Cadastro Promoção <span id="green-trybe">TrybeTrip</span><sup><img id="img-trybe" src="images/trybe.jpg"></sup></h2></legend>
     
         <div class="form-group">
         <label class="form-label" for="name">Nome Completo:</label>
@@ -29,7 +29,7 @@
         <div class="form-group">
         <label class="form-label" for="email">Email:</label>
         <input type="email" class="form-control" name="email-person" id="email" maxlength="50" minlength="10" placeholder="Email" required>
-        <small id="passwordHelpBlock" class="form-text text-muted"><em>*Deve ter entre 10 e 50 caracteres.</em></small>
+        <small id="email-help" class="form-text text-muted"><em>*Deve ter entre 10 e 50 caracteres.</em></small>
         </div>
 
 <br/>

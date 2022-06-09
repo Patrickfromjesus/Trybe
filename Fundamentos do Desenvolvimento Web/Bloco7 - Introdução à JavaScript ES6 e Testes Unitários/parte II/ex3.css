@@ -1,0 +1,17 @@
+body {
+background-color: #aaa;
+}
+
+#click-count {
+  background-color: #ccc;
+  border-radius: 8px;
+  height: 30px;
+  box-shadow: 6px 3px 3px #000;
+  cursor: pointer;
+  margin: 15px;
+}
+
+#click-count:active {
+  background-color: aqua;
+  font-style: italic;
+}

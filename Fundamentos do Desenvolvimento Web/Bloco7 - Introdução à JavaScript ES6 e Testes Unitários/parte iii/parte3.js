@@ -31,3 +31,5 @@ const exerciseThree = (lesson) => Object.keys(lesson).length;
 console.log(exerciseThree(lesson2));
 
 //Exercício 4
+const exerciseFour = (lesson) => Object.values(lesson);
+console.log(exerciseFour(lesson2));

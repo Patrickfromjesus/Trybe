@@ -22,6 +22,7 @@
 
       try {
         verifyInput(value1, value2);
+        verifyIsNaN(value1, value2);
         const result = parseInt(value1) + parseInt(value2);
         document.getElementById('result').innerHTML = `Resultado: ${result}`;
         document.getElementById('value1').value = '';
@@ -33,9 +34,17 @@
       }
     }
 
+//Exercício 1
     function verifyInput(input1, input2) {
       if(input1 === '' || input2 === '') {
-        throw new Error('Preencha os dois campos com valores!');
+        throw new Error('Preencha o(s) campo(s) vazio(s).');
+      }
+    }
+
+//Exercício 2
+    function verifyIsNaN(num1, num2) {
+      if(isNaN(num1) || isNaN(num2)) {
+        throw new Error('Tente utilizar apenas valores numéricos.');
       }
     }
 

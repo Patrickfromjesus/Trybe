@@ -91,3 +91,29 @@ function mathStudents(obj) {
 console.log(mathStudents(exerciseFive));
 
 //Exercício bônus 2
+function classProf(obj, prof) {
+  const students = Object.keys(obj);
+  const classes = [];
+
+  for(let i = 0; i < students.length; i++) {
+    let valueInside = obj[students[i]];
+
+    if(valueInside.professor === prof) {
+      classes.push(valueInside.materia);
+    }
+
+  }
+  
+  return classes;
+}
+
+function createReport (obj, prof) {
+  const report = {
+    professor: prof,
+    aulas: classProf(obj, prof),
+    estudantes: mathStudents(obj),
+  }
+
+  return report;
+}
+console.log(createReport(exerciseFive, 'Maria Clara'));

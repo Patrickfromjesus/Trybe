@@ -71,3 +71,23 @@ function verifyExist(obj, key, value) {
   return false;
 }
 console.log(verifyExist(lesson1, 'professor', 'Maria Clara'));
+
+//Exercício bônus 1
+function mathStudents(obj) {
+  const students = Object.keys(obj);
+  let count = 0;
+
+  for(let i = 0; i < students.length; i++) {
+    let valueInside = obj[students[i]];
+
+    if(valueInside.materia === 'Matemática') {
+      count += valueInside.numeroEstudantes;
+    }
+
+  }
+
+  return count;
+}
+console.log(mathStudents(exerciseFive));
+
+//Exercício bônus 2

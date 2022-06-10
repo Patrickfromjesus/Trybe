@@ -33,3 +33,11 @@ console.log(exerciseThree(lesson2));
 //Exercício 4
 const exerciseFour = (lesson) => Object.values(lesson);
 console.log(exerciseFour(lesson2));
+
+//Exercício 5
+const exerciseFive = {};
+exerciseFive['lesson1'] = Object.assign(lesson1);
+exerciseFive['lesson2'] = Object.assign(lesson2);
+exerciseFive['lesson3'] = Object.assign(lesson3); 
+
+console.log(exerciseFive);

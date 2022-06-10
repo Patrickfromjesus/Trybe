@@ -51,3 +51,8 @@ function totalStudents(obj) {
 console.log(totalStudents(exerciseFive));
 
 //Exercício 7
+const exerciseSeven = (obj, i) => {
+  const valuesArr = Object.values(obj);
+  return valuesArr[i];
+}
+console.log(exerciseSeven(lesson1, 3));

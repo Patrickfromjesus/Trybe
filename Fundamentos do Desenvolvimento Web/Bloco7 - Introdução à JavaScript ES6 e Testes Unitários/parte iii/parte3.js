@@ -39,5 +39,15 @@ const exerciseFive = {};
 exerciseFive['lesson1'] = Object.assign(lesson1);
 exerciseFive['lesson2'] = Object.assign(lesson2);
 exerciseFive['lesson3'] = Object.assign(lesson3); 
-
 console.log(exerciseFive);
+
+//Exercício 6
+function totalStudents(obj) {
+  const total1 = obj.lesson1.numeroEstudantes;
+  const total2 = obj.lesson2.numeroEstudantes;
+  const total3 = obj.lesson3.numeroEstudantes;
+  return total1 + total2 + total3;
+}
+console.log(totalStudents(exerciseFive));
+
+//Exercício 7

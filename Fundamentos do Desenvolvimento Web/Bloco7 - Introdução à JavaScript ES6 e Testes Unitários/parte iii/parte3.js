@@ -25,3 +25,9 @@ console.log(exerciseOne(lesson2, 'turno', 'noite'));
 //Exercício 2
 const exerciseTwo = (lesson) => Object.keys(lesson);
 console.log(exerciseTwo(lesson2));
+
+//Exercício 3
+const exerciseThree = (lesson) => Object.keys(lesson).length;
+console.log(exerciseThree(lesson2));
+
+//Exercício 4

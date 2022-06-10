@@ -56,3 +56,18 @@ const exerciseSeven = (obj, i) => {
   return valuesArr[i];
 }
 console.log(exerciseSeven(lesson1, 3));
+
+//Exercício 8
+function verifyExist(obj, key, value) {
+  const storageKeys = Object.keys(obj);
+  const storageValues = Object.values(obj);
+
+  for(let i = 0; i < storageKeys.length; i++) {
+    if(storageKeys[i].includes(key) && storageValues[i].includes(value)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+console.log(verifyExist(lesson1, 'professor', 'Maria Clara'));

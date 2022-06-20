@@ -33,4 +33,56 @@ function myFizzBuzz(num) {
   return num;
 }
 
-module.exports = {sum, myRemove, myFizzBuzz};
+function encode(strDecode) {
+  let copyEncode = "";
+
+  for(let i in strDecode) {
+    if(strDecode[i] === 'a') {
+      copyEncode += '1';
+    }
+    else if(strDecode[i] === 'e') {
+      copyEncode += '2';
+    }
+    else if(strDecode[i] === 'i') {
+      copyEncode += '3';
+    }
+    else if(strDecode[i] === 'o') {
+      copyEncode += '4';
+    }
+    else if(strDecode[i] === 'u') {
+      copyEncode += '5';
+    }
+    else {
+      copyEncode += strDecode[i];
+    }
+  }
+  return copyEncode;
+}
+
+function decode(strKey) {
+  let copyDecode = "";
+
+  for(let i in strKey) {
+    if(strKey[i] === '1') {
+      copyDecode += 'a';
+    }
+    else if(strKey[i] === '2') {
+      copyDecode += 'e';
+    }
+    else if(strKey[i] === '3') {
+      copyDecode += 'i';
+    }
+    else if(strKey[i] === '4') {
+      copyDecode += 'o';
+    }
+    else if(strKey[i] === '5') {
+      copyDecode += 'u';
+    }
+    else {
+      copyDecode += strKey[i];
+    }
+  }
+  return copyDecode;
+}
+
+module.exports = {sum, myRemove, myFizzBuzz, encode, decode};

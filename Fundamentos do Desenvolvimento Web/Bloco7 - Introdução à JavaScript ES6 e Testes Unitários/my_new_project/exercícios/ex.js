@@ -85,4 +85,22 @@ function decode(strKey) {
   return copyDecode;
 }
 
-module.exports = {sum, myRemove, myFizzBuzz, encode, decode};
+function techList(techArray, techString) {
+  if(techArray.length === 0) {
+    return 'Vazio!';
+  }
+
+  let orderArray = techArray.sort();
+  let object = [];
+
+  for(let i = 0; i < techArray.length; i++) {
+    object.push( {
+      tech: orderArray[i],
+      name: techString,
+    });
+  }
+
+  return object;
+}
+
+module.exports = {sum, myRemove, myFizzBuzz, encode, decode, techList};

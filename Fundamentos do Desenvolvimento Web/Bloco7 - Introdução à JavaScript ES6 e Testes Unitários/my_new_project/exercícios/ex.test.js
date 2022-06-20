@@ -1,4 +1,4 @@
-const {sum, myRemove, myFizzBuzz, encode, decode} = require('./ex');
+const {sum, myRemove, myFizzBuzz, encode, decode, techList} = require('./ex');
 
 //Ex 1
 describe('1. Test if sum function is correct.', () => {
@@ -51,6 +51,14 @@ describe('3. Test if FizzBuzz works well', () => {
 
 //Ex 4
 describe('4. Test if encode and decode works well', () => {
+  it('Test if the function encode is defined', () => {
+    expect(encode).toBeDefined();
+  });
+
+  it('Test if the function decode is defined', () => {
+    expect(decode).toBeDefined();
+  });
+
   it('test if vogals are converted to numbers correctly', () => {
     expect(encode('patrick')).toBe('p1tr3ck');
   })
@@ -75,3 +83,43 @@ describe('4. Test if encode and decode works well', () => {
     expect(encode('ptrck')).toBe('ptrck');
   })
 })
+
+//Ex 5
+describe('5. Testa a função techList', () => {
+  it('Test if the function techList is defined', () => {
+    expect(techList).toBeDefined();
+  });
+
+  it('Test if techList is a function', () => {
+    expect(typeof techList).toBe('function');
+  });
+
+  it('List with 5 tecnologies must return a list of sorted objects', () => {
+    expect(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas')).toEqual([
+      {
+        tech: 'CSS',
+        name: 'Lucas'
+      },
+      {
+        tech: 'HTML',
+        name: 'Lucas'
+      },
+      {
+        tech: 'JavaScript',
+        name: 'Lucas'
+      },
+      {
+        tech: 'Jest',
+        name: 'Lucas'
+      },
+      {
+        tech: 'React',
+        name: 'Lucas'
+      }
+    ]);
+  });
+
+  it('List with 0 tecnologies must return a message of error "Vazio!"', () => {
+    expect(techList([], 'Lucas')).toBe('Vazio!');
+  });
+});

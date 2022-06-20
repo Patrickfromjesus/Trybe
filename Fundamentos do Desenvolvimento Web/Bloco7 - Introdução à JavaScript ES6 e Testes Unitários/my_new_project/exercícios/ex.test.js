@@ -1,4 +1,4 @@
-const {sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate} = require('./ex');
+const {sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate, searchEmployee} = require('./ex');
 
 //Ex 1
 describe('1. Test if sum function is correct.', () => {
@@ -129,9 +129,11 @@ describe('6. Test hydrate function', () => {
   it('Test if hydrate function is defined', () => {
     expect(hydrate).toBeDefined();
   });
+
   it('Test if hydrate is a function', () => {
     expect(typeof hydrate).toBe('function');
   });
+
   it('When recive a string, returns a guess of how much cups of water should drink', () => {
     expect(hydrate('1 cerveja')).toBe('1 copo de água');
     expect(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')).toBe('7 copos de água');
@@ -140,3 +142,22 @@ describe('6. Test hydrate function', () => {
     expect(hydrate('4 caipirinhas e 2 cervejas')).toBe('6 copos de água');
   });
 });
+
+//Bônus
+describe('7. test if searchEmployee works well', () => {
+  it('test if function exists', () => {
+    expect(searchEmployee).toBeDefined();
+  })
+
+  it('test if it returns correct search', () => {
+    expect(searchEmployee('5569-4', 'firstName')).toEqual("George");
+  })
+
+  it('test if it recognizes when the ID doesn´t exist', () => {
+    expect(() => searchEmployee('33945-2', 'firstName')).toThrow(Error);
+  })
+
+  it('test if it recognizes when the detail isn´t inside the array.', () => {
+    expect(() => searchEmployee('5569-4', 'middleName')).toThrow(Error);
+  })
+})

@@ -4,4 +4,17 @@ function sum(a, b) {
   }
   return a + b;
 }
-module.exports = sum;
+
+function myRemove(arr, item) {
+  let copyArr = [];
+
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] !== item) {
+      copyArr.push(arr[i]);
+    }
+
+  }
+  return copyArr;
+}
+
+module.exports = {sum, myRemove};

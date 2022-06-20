@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1655728692185" clover="3.2.0">
+  <project timestamp="1655728692185" name="All files">
+    <metrics statements="19" coveredstatements="19" conditionals="18" coveredconditionals="18" methods="4" coveredmethods="4" elements="41" coveredelements="41" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1"/>
+    <file name="loginValidation.js" path="/home/patrick/Área de Trabalho/Trybe/Fundamentos do Desenvolvimento Web/Bloco7 - Introdução à JavaScript ES6 e Testes Unitários/my_new_project/loginValidation.js">
+      <metrics statements="19" coveredstatements="19" conditionals="18" coveredconditionals="18" methods="4" coveredmethods="4"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="23" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

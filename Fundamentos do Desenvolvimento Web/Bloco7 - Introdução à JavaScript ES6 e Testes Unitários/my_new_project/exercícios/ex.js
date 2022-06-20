@@ -103,4 +103,21 @@ function techList(techArray, techString) {
   return object;
 }
 
-module.exports = {sum, myRemove, myFizzBuzz, encode, decode, techList};
+function hydrate(string) {
+  let amount = 0;
+
+  for(let i of string) {
+    let helper = Number.parseInt(i);//Se for um número, vai transformar de boa, se for letra, vai virar NaN.
+
+    if(typeof(helper) && helper > 0 && helper < 10) { //Se helper for número, a afirmação é verdadeira, se for NaN, retorna falso.
+        amount += helper;
+    }
+  }
+
+  if(amount > 1) {
+    return `${amount} copos de água`;
+  }
+  return `${amount} copo de água`;
+}
+
+module.exports = {sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate};

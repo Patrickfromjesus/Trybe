@@ -1,4 +1,4 @@
-const {sum, myRemove, myFizzBuzz, encode, decode, techList} = require('./ex');
+const {sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate} = require('./ex');
 
 //Ex 1
 describe('1. Test if sum function is correct.', () => {
@@ -121,5 +121,22 @@ describe('5. Testa a função techList', () => {
 
   it('List with 0 tecnologies must return a message of error "Vazio!"', () => {
     expect(techList([], 'Lucas')).toBe('Vazio!');
+  });
+});
+
+//Ex 6
+describe('6. Test hydrate function', () => {
+  it('Test if hydrate function is defined', () => {
+    expect(hydrate).toBeDefined();
+  });
+  it('Test if hydrate is a function', () => {
+    expect(typeof hydrate).toBe('function');
+  });
+  it('When recive a string, returns a guess of how much cups of water should drink', () => {
+    expect(hydrate('1 cerveja')).toBe('1 copo de água');
+    expect(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')).toBe('7 copos de água');
+    expect(hydrate('2 shots de tequila, 2 cervejas e 1 corote')).toBe('5 copos de água');
+    expect(hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho')).toBe('3 copos de água');
+    expect(hydrate('4 caipirinhas e 2 cervejas')).toBe('6 copos de água');
   });
 });

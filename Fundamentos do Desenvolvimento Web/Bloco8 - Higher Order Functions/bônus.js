@@ -27,7 +27,7 @@ function dragonDamage(strength) {
 }
 //2
 function warriorDamage(strength, weaponDmg) {
-  const damage = Math.floor(Math.random() * (weaponDmg + 1 - strength) + strength);
+  const damage = Math.floor(Math.random() * (weaponDmg*strength + 1 - strength) + strength);
   return damage;
 }
 //3
@@ -63,10 +63,10 @@ const gameActions = {
     mage.healthPoints -= damageDragon;
     dragon.damage = damageDragon;
   },
-  function: () => battleMembers,
+  newScenario: () => battleMembers,
 };
 gameActions.warrior(warriorDamage);
 gameActions.mage(spendMage);
 gameActions.dragon(dragonDamage);
 
-console.log(gameActions.function());
+console.log(gameActions.newScenario());

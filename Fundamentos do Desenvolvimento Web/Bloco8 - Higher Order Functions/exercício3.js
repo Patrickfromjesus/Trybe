@@ -61,10 +61,13 @@ const books = [
   },
 ];
 
-function reduceNames() {
-  return books.reduce((acc, curr) => {
-    acc.push(curr.author.name);
+function averageAge() {
+  const sumAges = books.reduce((acc, curr) => {
+    acc += curr.releaseYear - curr.author.birthYear;
     return acc;
-  }, []).join(', ') + '.';
+  }, 0)
+  return sumAges / books.length;
 }
-console.log(reduceNames());
+
+console.log(averageAge());
+

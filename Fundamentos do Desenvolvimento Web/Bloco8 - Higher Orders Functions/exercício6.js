@@ -1,0 +1,1 @@
+const {books} = require('./exercícios.js');

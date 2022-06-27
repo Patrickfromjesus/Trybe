@@ -29,10 +29,10 @@ const people = [
 ];
 
 
-function filterPeople(...args) {
+function filterPeople(...args) {  //rest parameter.
   return args.filter(person => {
-    const {bornIn, nationality} = person;
+    const {bornIn, nationality} = person;  //destructuring object.
     return (nationality === 'Australian' && bornIn > 1900 && bornIn < 2001);
   })
 }
-console.log(filterPeople(...people));
+console.log(filterPeople(...people)); //spread operator.

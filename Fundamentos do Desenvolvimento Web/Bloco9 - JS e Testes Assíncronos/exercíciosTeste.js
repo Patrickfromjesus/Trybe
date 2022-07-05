@@ -30,5 +30,5 @@ const getUser2 = (param) => {
   }, delay());
 };
 
-getUser2(userFullName); // deve imprimir "Hello! My name is Ivan Ivanovich" depois de um certo tempo
-getUser2(userNationality); // deve imprimir "Ivan is Russian" depois de um certo tempo
+getUser2(userFullName); //Não pode colocar o console.log aqui, pois ela tem que esperar
+getUser2(userNationality); // o retorno do user2 chegar e só chega dps que o console é chamado.

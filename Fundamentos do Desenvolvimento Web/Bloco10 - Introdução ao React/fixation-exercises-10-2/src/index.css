@@ -6,9 +6,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 40px;
+  background-color: #222;
 }
 
 img {
+  width: 20%;
+}
+
+.profiles {
+  background-color: #ccc;
+  border-radius: 15px;
+  box-shadow: 3px 4px 5px #999;
+  margin: 12px;
   width: 20%;
 }
 

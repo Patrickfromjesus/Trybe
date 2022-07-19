@@ -7,7 +7,7 @@ class Pokedex extends Component {
       <div className='div-info'>
         <p>{name}</p>
         <p>{type}</p>
-        <p>averageWeight: {weight} { measurementUnit }</p>
+        <p>Average weight: {weight} { measurementUnit }</p>
       </div>
       <div className='div-image'>
         <img src={image} alt={`${name}`} />

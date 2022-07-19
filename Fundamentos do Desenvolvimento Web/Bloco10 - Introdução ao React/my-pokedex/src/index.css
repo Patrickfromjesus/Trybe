@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://img.freepik.com/vetores-premium/floresta-com-trilha_33070-4126.jpg?w=740);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#title {
+  text-align: center;
+  color: #fff;
+  text-shadow: 6px 6px 9px #000;
+}
+
+.div-pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.div-pokemon {
+  flex: 1;
+  min-width: 300px;
+  background-color: transparent;
+  margin: 10px;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #000;
+  color: #000;
+  text-shadow: 1px 1px 1px #fff;
+  font-weight: bold;
+  background-color: #aaa;
+  opacity: 90%;
+}
+
+.div-info {
+  flex: 1;
+  margin-left: 10px;
+}

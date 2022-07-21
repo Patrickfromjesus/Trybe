@@ -5,7 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(https://img.freepik.com/vetores-premium/floresta-com-trilha_33070-4126.jpg?w=740);
+  background-image: url("https://i.pinimg.com/564x/24/90/74/249074dd25db05c4d5e87b81599624ee.jpg");
+  width: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
 }
 
 code {
@@ -37,11 +41,33 @@ code {
   color: #000;
   text-shadow: 1px 1px 1px #fff;
   font-weight: bold;
-  background-color: #aaa;
-  opacity: 90%;
+  background-color: rgba(255, 255, 255, 0.349);
+  opacity: 95%;
+  margin: 40px;
 }
 
 .div-info {
   flex: 1;
   margin-left: 10px;
+}
+
+.pkm-btn {
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.527);
+  height: 40px;
+  width: 80px;
+  box-shadow: 5px 5px 5px yellow;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-weight: 500;
+  text-shadow: 1px 2px 4px #222;
+}
+
+.pkm-btn:hover {
+  border-bottom: 2px solid #222;
+}
+
+.pkm-btn-next button {
+  text-align: center;
 }

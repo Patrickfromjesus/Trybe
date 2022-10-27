@@ -36,3 +36,20 @@ waitMane(); */
 
 const ex6ECall = async () => ex6E();
 ex6ECall(); */
+
+async function ex6F() {
+  try {
+    const date = await fs.readFile(PATH_NAME, 'utf-8');
+    const dateFamily = await fs.readFile(PATH_FAMILY, 'utf-8');
+    const finalDateFamily = JSON.parse(dateFamily);
+    const maggieDate = JSON.parse(date).find(({ name }) => name.includes('Maggie'));
+    const NewData = finalDateFamily.map((e) => e.name.includes('Nelson') ? maggieDate : e);
+    await fs.writeFile(PATH_FAMILY, JSON.stringify(NewData));
+    console.log('Alteração feita com sucesso!');
+  } catch(err) {
+    console.error(err);
+  }
+}
+
+const ex6FCall = async () => ex6F();
+ex6FCall();

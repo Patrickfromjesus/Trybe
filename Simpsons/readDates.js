@@ -14,10 +14,12 @@ async function searchDate(id) {
   try {
     const date = await fs.readFile('./simpsons.json');
     const finalDate = JSON.parse(date);
-    if (!finalDate.some((e) => e.id === id.toString())) throw new Error('Id não encontrado!');
-    return console.log(finalDate.filter(e => e.id === id.toString()));
+    const getPerson = finalDate.find(e => e.id === id.toString());
+    if (!getPerson) throw new Error('Id não encontrado!');
+    return console.log(getPerson);
   } catch(err) {
     console.error(err);
   }
 }
-searchDate(10);
+
+searchDate(2);

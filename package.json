@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Patrickfromjesus/Trybe/issues"
   },
-  "homepage": "https://github.com/Patrickfromjesus/Trybe#readme"
+  "homepage": "https://github.com/Patrickfromjesus/Trybe#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }

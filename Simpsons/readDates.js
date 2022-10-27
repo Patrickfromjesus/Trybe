@@ -10,7 +10,7 @@ const fs = require('fs').promises;
 }
 readDates(); */
 
-async function searchDate(id) {
+/* async function searchDate(id) {
   try {
     const date = await fs.readFile('./simpsons.json');
     const finalDate = JSON.parse(date);
@@ -21,5 +21,4 @@ async function searchDate(id) {
     console.error(err);
   }
 }
-
-searchDate(2);
+searchDate(2); */

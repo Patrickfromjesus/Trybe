@@ -27,12 +27,12 @@ readDates(); */
 }
 searchDate(2); */
 
-async function ex6D () {
+/* async function ex6D () {
   try {
     const date = await fs.readFile(PATH_PERSON);
     const finalDate = JSON.parse(date);
-    const filteredPerson = finalDate.filter(({ id }) => Number(id) >= 1 && Number(id) <= 4);
-    await fs.writeFile('./simpsonFamily.json', JSON.stringify(filteredPerson));
+    const filteredDate = finalDate.filter(({ id }) => Number(id) >= 1 && Number(id) <= 4);
+    await fs.writeFile('./simpsonFamily.json', JSON.stringify(filteredDate));
     console.log('Alteração feita com sucesso!');
   } catch(err) {
     console.error(err);
@@ -40,4 +40,4 @@ async function ex6D () {
 }
 
 const ex6DCall = async () => await ex6D();
-ex6DCall();
+ex6DCall(); */

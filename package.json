@@ -1,0 +1,23 @@
+{
+  "name": "trybe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bmi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bmi": "node bmi.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patrickfromjesus/Trybe.git"
+  },
+  "author": "patrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patrickfromjesus/Trybe/issues"
+  },
+  "homepage": "https://github.com/Patrickfromjesus/Trybe#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

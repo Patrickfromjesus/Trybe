@@ -64,7 +64,7 @@ async function readSomething() {
   }
 }); */
 
-app.delete('/movies/:id', async (req, res) => {
+/* app.delete('/movies/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const movies = await readSomething();
@@ -75,6 +75,19 @@ app.delete('/movies/:id', async (req, res) => {
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
-})
+}); */
+
+app.get('/movies/search', async (req, res) => {
+  try {
+    const { q } = req.query;
+    const movies = await readSomething();
+    if(!q) res.status(200).end();
+    const filtered = movies.filter(({ movie }) => movie.toLowerCase().includes(q.toLowerCase()));
+    const jsoned = JSON.stringify(filtered);
+    res.status(200).json(jsoned); 
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
 
 module.exports = app;

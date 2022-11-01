@@ -7,7 +7,7 @@ const app = require('../../utils/app');
 
 chai.use(chaiHttp);
 
-const mockFile = {
+const mockFile = JSON.stringify({
   "brands": [
       {
           "id": 1,
@@ -44,9 +44,17 @@ const mockFile = {
           "brandId": 3
       }
   ]
-};
+});
 
 describe('Testes de integração', function () {
+  /* beforeEach(function () {
+    sinon.stub(fs, 'writeFile').resolves(mockFile);
+  });
+
+  afterEach(function () {
+    sinon.restore();
+  }); */
+
   describe('1. testes de chocolate', function () {
 
     it('A. Retorna o total de chocolates com o readFile', async function () {
@@ -83,6 +91,23 @@ describe('Testes de integração', function () {
         .request(app).get('/chocolates/search?name=ZZZ');
         expect(response.status).to.be.equal(404);
         expect(response.body).to.deep.equal([]);
+    });
+
+    it('D. Atualização de chocolate com PUT', async function () {
+      const newInfos = {
+        name: 'Mint Pretty Good',
+        brandId: 2
+      };
+
+      const response = await chai
+        .request(app).put('/chocolates/1')
+        .send(newInfos);
+      expect(response.status).to.be.equal(200);
+      expect(response.body.chocolates).to.deep.equal({
+        id: 1,
+        name: "Mint Pretty Good",
+        brandId: 2
+      });
     });
 
   });

@@ -58,6 +58,33 @@ describe('Testes de integração', function () {
       expect(response.body).to.deep.equal(total);
     });
 
+    it('B. Retornar os chocolates pela query do nome', async function () {
+      const expectedBody = [
+        {
+          "id": 3,
+          "name": "Mon Chéri",
+          "brandId": 2
+        },
+        {
+          "id": 4,
+          "name": "Mounds",
+          "brandId": 3
+        }
+      ];
+
+      const response = await chai
+        .request(app).get('/chocolates/search?name=Mo');
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.deep.equal(expectedBody);
+    });
+
+    it('C. Retornar string vazia e 404, caso não ache o chocolate', async () => {
+      const response = await chai
+        .request(app).get('/chocolates/search?name=ZZZ');
+        expect(response.status).to.be.equal(404);
+        expect(response.body).to.deep.equal([]);
+    });
+
   });
 
 });

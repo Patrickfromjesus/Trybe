@@ -3,6 +3,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const { readFile, writeFile } = require('../Functions/Readteams');
 const { validateTeam, existingId } = require('../middlewares/teamsMiddlewares');
+const apiCredentials = require('../middlewares/apiCredentials');
 
 const PATH_NAME = path.resolve(__dirname, '../Teams.json');
 const app = express();
@@ -21,6 +22,7 @@ let nextId = 3;
   }
 ] */
 
+app.use(apiCredentials);
 app.use(express.json());
 
 app.get('/teams/:id', existingId, async (req, res) => {

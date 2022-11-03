@@ -8,6 +8,11 @@ const readFile = async () => {
   return JSON.parse(allTeams);
 }
 
+const getId = async () => {
+  const teams = await readFile();
+  return (teams.length + 1);
+}
+
 const writeFile = async (file) => {
   await fs.writeFile(PATH_NAME, JSON.stringify(file));
 }
@@ -15,4 +20,5 @@ const writeFile = async (file) => {
 module.exports = {
   readFile,
   writeFile,
+  getId,
 };

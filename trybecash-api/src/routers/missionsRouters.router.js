@@ -18,7 +18,7 @@ missionsRouter.get('/:id', async (req, res) => {
 missionsRouter.post('/', validatePutPost, async (req, res) => {
   const mission = req.body;
   const [result] = await insert(mission);
-  res.status(201).json({ message: `Usuário ${result.insertId} criado com sucesso!` });
+  res.status(201).json({ message: `Missão ${result.insertId} criado com sucesso!` });
 });
 
 missionsRouter.put('/:id', validatePutPost, async (req, res) => {
@@ -31,7 +31,7 @@ missionsRouter.put('/:id', validatePutPost, async (req, res) => {
 missionsRouter.delete('/:id', async (req, res) => {
   const { id } = req.params;
   const [result] = await remove(id);
-  res.status(204).json(result);
+  res.status(204).end();
 });
 
 module.exports = missionsRouter;

@@ -21,7 +21,7 @@ describe('Teste de integração da tabela missions', function () {
       });
 
     expect(response.status).to.be.equal(201);
-    expect(response.body).to.deep.equal({ message: 'Usuário 22 criado com sucesso!' });
+    expect(response.body).to.deep.equal({ message: 'Missão 22 criado com sucesso!' });
   });
 
   afterEach(sinon.restore);
@@ -87,6 +87,15 @@ describe('Teste de integração da tabela missions', function () {
       expect(response.body).to.deep.equal({
         "message": "Todos os campos devem estar preenchidos e possuir exatamente as mesmas chaves."
       });
+  });
+
+  it('6. Teste do DELETE', async function () {
+    sinon.stub(connection, 'execute').resolves([{ id: 22 }]);
+
+    const response = await chai
+      .request(app).delete('/missions/22');
+    
+    expect(response.status).to.be.equal(204);
   });
 
 });

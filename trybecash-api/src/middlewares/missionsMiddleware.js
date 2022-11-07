@@ -1,4 +1,4 @@
-const validatePut = (req, res, next) => {
+const validatePutPost = (req, res, next) => {
   const body = req.body;
   const arrBody = Object.keys(body);
   const validation = ['name', 'year', 'country', 'destination'];
@@ -7,4 +7,4 @@ const validatePut = (req, res, next) => {
   }
   next();
 }
-module.exports = { validatePut };
+module.exports = { validatePutPost };

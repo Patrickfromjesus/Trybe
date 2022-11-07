@@ -1,6 +1,6 @@
 const express = require('express');
 const { insert, read, update, remove } = require('../db/crudMissions');
-const { validatePut } = require('../middlewares/missionsMiddleware');
+const { validatePutPost } = require('../middlewares/missionsMiddleware');
 
 const missionsRouter = express.Router();
 
@@ -15,17 +15,17 @@ missionsRouter.get('/:id', async (req, res) => {
   res.status(200).json(result);
 });
 
-missionsRouter.post('/', async (req, res) => {
+missionsRouter.post('/', validatePutPost, async (req, res) => {
   const mission = req.body;
   const [result] = await insert(mission);
   res.status(201).json({ message: `Usuário ${result.insertId} criado com sucesso!` });
 });
 
-missionsRouter.put('/:id', validatePut, async (req, res) => {
+missionsRouter.put('/:id', validatePutPost, async (req, res) => {
   const { id } = req.params;
   const body = req.body;
   const [result] = await update(body, id);
-  res.status(200).json(result);
+  res.status(200).json(result.changedRows);
 });
 
 missionsRouter.delete('/:id', async (req, res) => {

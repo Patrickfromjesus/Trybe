@@ -1,5 +1,5 @@
+require('dotenv').config(); //TEM QUE SER ANTES DO REQUIRE DO APP!
 const app = require('./app');
-require('dotenv').config();
 
 const PORT = 3001;
 

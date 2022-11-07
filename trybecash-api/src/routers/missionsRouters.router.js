@@ -18,7 +18,7 @@ missionsRouter.get('/:id', async (req, res) => {
 missionsRouter.post('/', async (req, res) => {
   const mission = req.body;
   const [result] = await insert(mission);
-  res.status(201).json(result.insertId);
+  res.status(201).json({ message: `Usuário ${result.insertId} criado com sucesso!` });
 });
 
 missionsRouter.put('/:id', validatePut, async (req, res) => {

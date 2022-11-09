@@ -1,3 +1,0 @@
- 1855  history
- 1856  c
- 1857  history | tail -3 > history.txt

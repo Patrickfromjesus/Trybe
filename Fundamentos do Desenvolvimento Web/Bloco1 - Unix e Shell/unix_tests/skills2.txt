@@ -1,9 +1,0 @@
-Internet
-Unix
-Bash
-JavaScript
-HTML5
-CSS3
-TypeScript
-Python
-Malabarista, ameeegans

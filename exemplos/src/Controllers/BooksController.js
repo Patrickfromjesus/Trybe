@@ -46,7 +46,7 @@ const removeBook = async (req, res) => {
     const response = await remove(id);
     return res.status(204).json(response);
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return res.status(500).json({ message: 'Algo deu errado' });
   }
 };
 

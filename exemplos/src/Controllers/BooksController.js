@@ -1,4 +1,4 @@
-const { getAll, getById, create } = require('../Services/BooksService');
+const { getAll, getById, create, update } = require('../Services/BooksService');
 
 const getAllBooks = async (_req, res) => {
   try {
@@ -27,10 +27,22 @@ const createBook = async (req, res) => {
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
-}
+};
+
+const updateBook = async (req, res) => {
+  try {
+    const { body } = req;
+    const { id } = req.params;
+    const response = await update(id, body);
+    return res.status(204).json(response);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
 
 module.exports = {
   getAllBooks,
   getBooksById,
   createBook,
+  updateBook,
 };

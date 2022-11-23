@@ -10,7 +10,20 @@ const getById = async (id) => {
   return books;
 };
 
+const create = async ({ title, author, pageQuantity }) => {
+  const [books] = await book.bulkCreate([
+    {
+      title,
+      author,
+      pageQuantity,
+    }
+  ]);
+
+  return books;
+}
+
 module.exports = {
   getAll,
   getById,
+  create,
 };

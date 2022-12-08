@@ -1,0 +1,25 @@
+{
+  "name": "trybe",
+  "version": "1.0.0",
+  "description": "Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Patrick Gomes](https://www.linkedin.com/in/patrickgomesc)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patrickfromjesus/Trybe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patrickfromjesus/Trybe/issues"
+  },
+  "homepage": "https://github.com/Patrickfromjesus/Trybe#readme",
+  "devDependencies": {
+    "@tsconfig/node16": "1.0",
+    "@types/node": "16.11",
+    "typescript": "4.4"
+  }
+}

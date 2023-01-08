@@ -2,22 +2,23 @@
   "name": "trybe",
   "version": "1.0.0",
   "description": "",
-  "main": "bmi.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bmi": "node bmi.js"
+    "dev": "tsc && node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Patrickfromjesus/Trybe.git"
   },
-  "author": "patrick",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Patrickfromjesus/Trybe/issues"
   },
   "homepage": "https://github.com/Patrickfromjesus/Trybe#readme",
-  "dependencies": {
-    "readline-sync": "^1.4.10"
+  "devDependencies": {
+    "typescript": "^4.9.4"
   }
 }

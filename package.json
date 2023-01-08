@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc && node build/exercise3",
+    "dev": "tsc && node build/exercise5-6",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

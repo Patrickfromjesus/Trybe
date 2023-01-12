@@ -1,0 +1,1 @@
+console.log(Date().slice(11, 16));

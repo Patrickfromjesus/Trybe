@@ -24,7 +24,7 @@ class Person {
   };
 }
 
-class Student extends Person {
+/* class Student extends Person {
   private _matricula: string;
   private _notasProva: number[] = [];
   private _notasTrabalho: number[] = [];
@@ -79,14 +79,93 @@ console.log(student1);
 student1.notasProva = [10, 9, 8, 9];
 student1.notasTrabalho = [10, 10];
 console.table(student1);
-/* student1.notasProva = [10, 9, 8, 9, 10];
+student1.notasProva = [10, 9, 8, 9, 10];
 student1.notasTrabalho = [10, 10, 5];
-console.log(student1); */
+console.log(student1);
 
 const student2 = new Student(person2.name, person2.birthDate);
 console.log(student2);
 student2.notasProva = [5, 6, 5, 9];
 student2.notasTrabalho = [10, 8];
-console.table(student2);
+console.table(student2); */
+
+interface Employee {
+  registration: number;
+  salary: number;
+  admissionDate: Date;
+  generateRegistration(): string;
+}
+
+class Subject {
+  private _name: string = '';
+
+  constructor(n: string) {
+    this.name = n;
+  }
+
+  get name() { return this._name };
+
+  set name(n: string) {
+    if (n.length < 3) return;
+    this._name = n;
+  }
+}
+
+/* const math = new Subject('math');
+console.log(math.name);
+math.name = 'portuguese';
+math.name = 'a';
+console.log(math.name); */
+
+class Teacher extends Person implements Employee {
+  private _registration: number;
+  private _salary: number = 0;
+  private _admissionDate: Date = new Date(Date());
+  private _subject: Subject;
+
+  constructor(n: string, b: Date, s: number, sub: string) {
+    super(n, b);
+    this._registration = Number(this.generateRegistration());
+    this.salary = s;
+    this._subject = new Subject(sub);  
+  }
+
+  get registration() { return this._registration };
+
+  generateRegistration() {
+    const digit = '1234567890';
+    let register = this.admissionDate.getFullYear().toString();
+    for (let i = 0; i < 12; i += 1) {
+      register += digit.charAt(Math.floor(Math.random() * digit.length));
+    }
+    return register;
+  }
+
+  get salary() { return this._salary };
+
+  set salary(s: number) {
+    if (s < 0) return;
+    this._salary = s;
+  }
+
+  set admissionDate(admDate: Date) {
+    const today = Date.now();
+    if (today < admDate.getMilliseconds()) return;
+    this._admissionDate = admDate;
+  }
+
+  get admissionDate() { return this._admissionDate };
+
+  get subject () { return this._subject.name };
+};
+
+const teacher1 = new Teacher('teacher1', new Date('1995-06-18'), 2900, 'Math');
+
+console.log(teacher1.name);
+console.log(teacher1.birthDate);
+console.log(teacher1.salary);
+console.log(teacher1.admissionDate);
+console.log(teacher1.registration);
+console.log(teacher1.subject);
 
 

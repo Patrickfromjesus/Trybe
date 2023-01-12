@@ -1,30 +1,3 @@
-class Student {
-  private _matricula: string;
-  private _nome: string;
-  private _notasProva: number[];
-  private _notasTrabalho: number[];
-
-  constructor(m: string, n: string, np: number[], nt: number[]) {
-    this._matricula = m;
-    this._nome = n;
-    this._notasProva = np;
-    this._notasTrabalho = nt;
-  }
-
-  soma() {
-    return [...this._notasProva, ...this._notasTrabalho]
-      .reduce((acc, curr) => acc + curr, 0);
-  }
-
-  get matricula() { return this._matricula };
-  get nome() { return this._nome };
-
-  media() {
-    const sum = this.soma();
-    return (sum / 6).toFixed(2);
-  }
-}
-
 class Person {
   private _name: string;
   private _birthDate: Date;
@@ -51,6 +24,44 @@ class Person {
   };
 }
 
+class Student extends Person {
+  private _matricula: string;
+  private _notasProva: number[] = [];
+  private _notasTrabalho: number[] = [];
+
+  constructor(n: string, d: Date) {
+    super(n, d);
+    this._matricula = this.generateMatricula();
+  }
+
+  private generateMatricula(): string {
+    const numbers = Math.floor(Math.random() * 10);
+    const index = Math.floor(Math.random() * 2 + 1);
+    return `100000000${numbers}-${this.name.substring(2).toUpperCase()}.${this.name.substring(index, 2)}`;
+  }
+
+  soma() {
+    return [...this._notasProva, ...this._notasTrabalho]
+      .reduce((acc, curr) => acc + curr, 0);
+  }
+
+  get matricula() { return this._matricula };
+
+  set notasProva(notas: number[]) {
+    if (notas.length !== 4) throw new Error('Deve ter exatamente 4 notas');
+    this._notasProva = notas;
+  }
+
+  set notasTrabalho(notas: number[]) {
+    if (notas.length !== 2) throw new Error('Deve ter exatamente 2 notas');
+    this._notasTrabalho = notas;
+  }
+
+  media() {
+    const sum = this.soma();
+    return (sum / 6).toFixed(2);
+  }
+}
 
 const person1 = new Person('person1', new Date('1990-05-01'));
 const person2 = new Person('person2', new Date('1931-10-21'));
@@ -62,5 +73,20 @@ console.log(person1.birthDate);
 console.log(person2.birthDate);
 person2.birthDate = new Date('1902-10-21');
 console.log(person2.birthDate);
- 
+
+const student1 = new Student(person1.name, person1.birthDate);
+console.log(student1);
+student1.notasProva = [10, 9, 8, 9];
+student1.notasTrabalho = [10, 10];
+console.table(student1);
+/* student1.notasProva = [10, 9, 8, 9, 10];
+student1.notasTrabalho = [10, 10, 5];
+console.log(student1); */
+
+const student2 = new Student(person2.name, person2.birthDate);
+console.log(student2);
+student2.notasProva = [5, 6, 5, 9];
+student2.notasTrabalho = [10, 8];
+console.table(student2);
+
 

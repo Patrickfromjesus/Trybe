@@ -1,13 +1,22 @@
 import Quadra from './Quadra';
 
 export default class Clube {
-  private _quadras: Quadra[] = [];
+  private _quadrasFutebol: Quadra[] = [];
+  private _quadrasTenis: Quadra[] = [];
 
-  public addQuadra(q: Quadra) {
-    this._quadras.push(q);
+  public addQuadraFut(q: Quadra) {
+    this._quadrasFutebol.push(q);
   }
 
-  public buscarQuadra<T extends Quadra>(i: number): T {
-    return this._quadras[i] as T;
+  public addQuadraTenis(q: Quadra) {
+    this._quadrasTenis.push(q);
+  }
+
+  public buscarQuadraFut(i: number): Quadra {
+    return this._quadrasFutebol[i];
+  }
+
+  public buscarQuadraTenis(i: number): Quadra {
+    return this._quadrasTenis[i];
   }
 }

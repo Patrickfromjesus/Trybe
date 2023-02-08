@@ -10,7 +10,7 @@ export default class QuadraFutebol extends Quadra {
     return {
       protocol: this.generateProtocol(),
       date: d,
-      rules: this.rulesFutebol as IFutebol,
+      rules: this.rulesFutebol as unknown as IFutebol,
     };
   }
 }

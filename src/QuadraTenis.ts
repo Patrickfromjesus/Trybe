@@ -8,7 +8,7 @@ export default class QuadraTenis extends Quadra {
     return {
       protocol: this.generateProtocol(),
       date: d,
-      rules: tenisRules as ITenis,
+      rules: tenisRules as unknown as ITenis,
     }
   }
 }

@@ -15,3 +15,14 @@ const quadraTenis1 = new QuadraTenis_1.default();
 clube1.addQuadraTenis(quadraTenis1);
 const reserva2 = quadraTenis1.reservar(new Date('2023-01-15'));
 console.log(reserva2);
+class Login {
+    setState(key) {
+        Login.state = { [Object.keys(key)[0]]: Object.values(key)[0] };
+    }
+    print() {
+        console.log(Login.state);
+    }
+}
+const login1 = new Login();
+login1.setState({ name: 'patrick' });
+login1.print();
